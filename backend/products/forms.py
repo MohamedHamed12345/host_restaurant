@@ -1,9 +1,0 @@
-# from django import forms
-# from .models import Product
-# class ProductForm(forms.ModelForm):
-#     class Meta:
-#         model = Product
-#         fields = ('name', 'price', 'available_quantity', 'category', 'discount', 'description', 'images')
-#         widgets = {
-#             'images': forms.CheckboxSelectMultiple,
-#         }
