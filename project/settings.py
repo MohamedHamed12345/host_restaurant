@@ -194,11 +194,19 @@ SIMPLE_JWT = {
 # BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
-MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT =  os.path.join(BASE_DIR, 'static/media')
+# MEDIA_URL = '/static/media/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
+# Media files (user-uploaded content)
 MEDIA_URL = '/media/'
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 CORS_ORIGIN_ALLOW_ALL = True
 
 # DATABASES = {
@@ -212,6 +220,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     }
 # }
 # WSGI_APPLICATION = 'vercel_app.wsgi.app'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
